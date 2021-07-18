@@ -1,0 +1,45 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+	
+	<div class="card-box mb-30"  apply="org.zkoss.bind.BindComposer" align=" stretch" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.CommentModel')" >
+	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center ">
+	
+	
+	
+	<listbox  multiple="true"  model="@bind(vm.listOfComment)" mold="paging" pageSize="10" >
+	
+<listhead  >
+
+<listheader   label="Sender/Reciever" align="center"></listheader>
+
+<listheader   label="ibitekerezo" align="center"></listheader>
+
+ 
+ 
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem  >
+
+<listcell><label value="@bind(m.user.accountType)" style="margin-left:-130px;"/>
+
+</listcell>
+
+<listcell>
+<label value="@bind(m.comments)" style="margin-left:-130px;"/>
+</listcell>
+
+</listitem>
+
+</template>
+
+</listbox>
+</div>
+
+</div>
+
+
+
+</zk>

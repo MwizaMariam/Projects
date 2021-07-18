@@ -1,0 +1,59 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+
+<zk>
+<div class="card-box mb-30"   apply="org.zkoss.bind.BindComposer"  id="win" align="stretch" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.SubscriptionTypeModel')" xmlns:h="http://www.w3.org/1999/xhtml"
+
+xmlns:f="http://www.w3.org/1999/xhtml"
+xmlns:zk="http://www.zkoss.org/2005/zk"
+
+>
+<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center ">
+		<div class="container">
+
+<listbox  multiple="true"   model="@bind(vm.listOfAllSubscribers)"   mold="paging" pageSize="5">
+	
+<listhead  >
+<listheader   label="Id" align="center"></listheader>
+<listheader   label="Ikiciro" align="center"></listheader>
+
+<listheader label="Igiciro" align="center"></listheader>
+
+<listheader label="igikorwa" align="center"></listheader>
+
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem>
+<listcell><label value="@bind(m.subscriptionTypeId)" style="font-weight:bold;margin-left:-20px;"/></listcell>
+<listcell><label value="@bind(m.level)" style="margin-left:-20px;"/></listcell>
+
+<listcell><label value="@bind(m.price)" style="margin-left:-20px;"/></listcell>
+<listcell>
+<button apply="org.zkoss.bind.BindComposer"
+		 viewModel="@id('n') @init('cultureLearning.cultureLearning.navigation.NavigationViewModel')"   onClick="@command('navigate', url='/pages/courseClient/UpdateLevel.zul')" style="margin-left:-55px;margin-top:20px;background:green ;width:70px;" iconSclass="z-icon-edit" /> 
+<button   onClick="@command('delete',de=m)" style="margin-left:45px;margin-top:-0px;background:red ;width:80px;" image="/images/delete.png"   />
+  </listcell>
+
+</listitem>
+
+</template>
+
+
+</listbox>
+</div>
+</div>
+</div>
+
+<script src="vendors/scripts/core.js"></script>
+	<script src="vendors/scripts/script.min.js"></script>
+	<script src="vendors/scripts/process.js"></script>
+	<script src="vendors/scripts/layout-settings.js"></script>
+	<script src="src/plugins/jQuery-Knob-master/jquery.knob.min.js"></script>
+	<script src="src/plugins/highcharts-6.0.7/code/highcharts.js"></script>
+	<script src="src/plugins/highcharts-6.0.7/code/highcharts-more.js"></script>
+	<script src="src/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+	<script src="src/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="vendors/scripts/dashboard2.js"></script>
+
+</zk>

@@ -1,0 +1,51 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk >
+<div  class="card-box mb-30" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.CommentModel')" >
+
+
+<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-6 col-lg-7"  >
+
+				</div>
+				<div class="col-md-6 col-lg-5">
+					<div class="login-box bg-white box-shadow border-radius-10">
+					<div class="login-title">
+					<html>
+			<![CDATA[
+				<ul>
+				<h2 class="text-center text-primary">Tanga igitekerezo</h2>
+				</ul>
+				]]>
+				</html>
+					
+</div>
+						
+							<div class="input-group custom">
+								
+								<textbox value="@save(vm.comment.comments)"   style="width:900px; margin-left:20px;height:300px;"  class="form-control" />
+								<div class="input-group-append custom">
+								</div>
+								</div>
+							<div class="row">
+								<div class="col-sm-12">
+		
+													
+									<div class="font-16 weight-600 pt-10 pb-10 text-center" ></div>
+									<div class="input-group mb-0">
+										
+										<button id="save" iconSclass="z-icon-comment" class="btn btn-primary btn-lg btn-block" label="Ohereza igitekerezo" onClick="@command('save')" autodisable="self"  ></button>
+										</div>
+								</div>
+								
+							</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</zk>

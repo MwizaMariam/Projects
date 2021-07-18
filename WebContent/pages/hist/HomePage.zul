@@ -1,0 +1,322 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+
+<zk>
+<hbox>
+<style src="/Culture.css"/>
+<style src="/Home.css"></style>
+<script type="text/javascript" src="/home.js"> 
+</script>
+
+<separator></separator>
+<html>
+<![CDATA[
+<div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <!-- single_carouse -->
+            <div class="single_slider  d-flex align-items-center slider_bg_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text ">
+                                <h3>Agahugu katagira <br>
+                                   Umuco  <br>
+                                    karacika.</h3>
+                                    <a href="../../Login.zul" class="boxed-btn3">ikaze</a>
+                                    <a href="../../Login.zul" class="boxed-btn4">Injiramo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               <!--  <div class="buttons">
+                
+                <button class="controls"  data-id="previous">&lt; <img src="/next.png"></button>
+
+                <button class="controls" data-id="pause">&#10074;&#10074;</button>
+
+                <button class="controls" data-id="next">&gt;</button> -->
+                
+
+              <!-- </div> -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+           
+            
+                <div class="single_slider  d-flex align-items-center slider_bg_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text ">
+                            <h3>Agahugu katagira <br>
+                            Umuco  <br>
+                             karacika.</h3>
+                             <a href="../../Login.zul" class="boxed-btn3">ikaze</a>
+                             <a href="../../Login.zul" class="boxed-btn4">Injiramo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="buttons">
+                 <button class="controls" data-id="previous">&lt;</button>
+
+                <button class="controls" data-id="pause">&#10074;&#10074;</button>
+
+                <button class="controls" data-id="next">&gt;</button>
+              </div> -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>  
+            
+             
+            <!-- single_carouse -->
+             <div class="single_slider  d-flex align-items-center slider_bg_3"> 
+               <div class="container"> 
+                   <div class="row"> 
+                      <div class="col-xl-12"> 
+                           <div class="slider_text "> 
+                           <h3>Agahugu katagira <br> 
+                           Umuco  <br> -->
+                            karacika.</h3> 
+                            <a href="../../Login.zul" class="boxed-btn3">ikaze</a>
+                            <a href="../../Login.zul" class="boxed-btn4">Injiramo</a> 
+                           </div> 
+                       </div> 
+                   </div> 
+               </div> 
+               <a class="prev" onclick="plusSlides(-1)">&#10094;</a> 
+               <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+               </div> -->
+              
+              <!-- <div class="buttons">
+<!--               <button class="controls" data-id="previous">&lt;</button> -->
+
+<!--               <button class="controls" data-id="pause">&#10074;&#10074;</button> -->
+
+<!--               <button class="controls" data-id="next">&gt;</button> -->
+            </div> -->
+            
+           
+         
+          <!-- single_carouse -->
+            <div class="single_slider  d-flex align-items-center slider_bg_4"> 
+            <div class="container"> 
+                <div class="row">
+                     <div class="col-xl-12"> 
+                         <div class="slider_text "> 
+                        <h3>Agahugu katagira <br> 
+                         Umuco  <br> -->
+                         karacika.</h3> 
+                         <a href="../../Login.zul" class="boxed-btn3">ikaze</a> 
+                          <a href="../../Login.zul" class="boxed-btn4">Injiramo</a> 
+                         </div> 
+                    </div> 
+             </div> 
+           <!--  <div class="buttons">
+            <button class="controls" data-id="previous">&lt;</button>
+
+            <button class="controls" data-id="pause">&#10074;&#10074;</button>
+
+            <button class="controls" data-id="next">&gt;</button>
+          </div> -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div> 
+        
+      
+          <div class="single_slider  d-flex align-items-center slider_bg_5"> 
+        
+           <div class="container"> 
+               <div class="row">
+                  <div class="col-xl-12"> 
+                      <div class="slider_text "> 
+                      <h3>Agahugu katagira <br> 
+                      Umuco  <br> 
+                       karacika.</h3> 
+                        <a href="../../Login.zul" class="boxed-btn3">ikaze</a> 
+                        <a href="../../Login.zul" class="boxed-btn4">Injiramo</a> 
+                       </div> 
+                   </div> 
+              </div> 
+          </div> -->
+           <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
+           <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+       </div> -->
+       <!--  <div class="buttons">
+        <button class="controls" data-id="previous">&lt;</button>
+
+        <button class="controls" data-id="pause">&#10074;&#10074;</button>
+
+        <button class="controls" data-id="next">&gt;</button>
+      </div> -->
+      
+     
+      
+      
+         <div class="single_slider  d-flex align-items-center slider_bg_6"> 
+         <div class="container"> 
+           <div class="row"> 
+                <div class="col-xl-12"> 
+                    <div class="slider_text "> 
+                    <h3>Agahugu katagira <br> 
+                     Umuco  <br> 
+                      karacika.</h3> 
+                     <a href="../../Login.zul" class="boxed-btn3">ikaze</a> 
+                      <a href="../../Login.zul" class="boxed-btn4">Injiramo</a> 
+                     </div> 
+                </div> 
+            </div> 
+       </div> 
+       <!--  <div class="buttons">
+        <button class="controls" data-id="previous">&lt;</button>
+
+        <button class="controls" data-id="pause">&#10074;&#10074;</button>
+
+        <button class="controls" data-id="next">&gt;</button>
+      </div> -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>  
+    
+    
+    
+   
+       <div class="single_slider  d-flex align-items-center slider_bg_7"> 
+      <div class="container">
+          <div class="row"> 
+              <div class="col-xl-12"> 
+                  <div class="slider_text "> 
+                  <h3>Agahugu katagira <br> 
+                  Umuco  <br> 
+                    karacika.</h3>
+                    <a href="../../Login.zul" class="boxed-btn3">ikaze</a> 
+                    <a href="../../Login.zul" class="boxed-btn4">Injiramo</a> 
+                   </div> 
+               </div> 
+           </div> 
+      </div> 
+      <!-- <div class="buttons">
+      <button class="controls" data-id="previous">&lt;</button>
+
+      <button class="controls" data-id="pause">&#10074;&#10074;</button>
+
+      <button class="controls" data-id="next">&gt;</button>
+    </div> -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div> 
+ 
+    
+  <!-- single_carouse -->
+    <div class="single_slider  d-flex align-items-center slider_bg_8"> 
+     <div class="container"> 
+         <div class="row">
+             <div class="col-xl-12"> 
+                 <div class="slider_text "> 
+                <h3>Agahugu katagira <br> 
+                 Umuco  <br> 
+                  karacika.</h3> 
+                  <a href="../../Login.zul" class="boxed-btn3">ikaze</a> 
+                  <a href="../../Login.zul" class="boxed-btn4">Injiramo</a> 
+                 </div> 
+             </div> 
+         </div> 
+  </div> 
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> 
+    <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+ </div> 
+
+
+<!-- single_carouse -->
+<!--   <div id="slider" class="single_slider  d-flex align-items-center slider_bg_9"> -->
+<!--   <div class="container"> -->
+<!--       <div class="row"> -->
+<!--           <div class="col-xl-12"> -->
+<!--               <div class="slider_text "> -->
+<!--               <h3>Agahugu katagira <br> -->
+<!--               Umuco  <br> -->
+<!--                karacika.</h3> -->
+<!--                       <a href="../../Login.zul" class="boxed-btn3">ikaze</a> -->
+<!--                       <a href="../../Login.zul" class="boxed-btn4">Injiramo</a> -->
+<!--               </div> -->
+<!--           </div> -->
+<!--       </div> -->
+<!--   </div> -->
+  <!-- <div class="buttons">
+  <button class="controls" data-id="previous">&lt;</button>
+
+  <button class="controls" data-id="pause">&#10074;&#10074;</button>
+
+  <button class="controls" data-id="next">&gt;</button>
+</div> -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>  
+<!-- <footer class="footer">
+<div class="footer_top">
+    <div class="container">
+        <div class="newsLetter_wrap">
+            <div class="row justify-content-between">
+            Inteko Nyarwanda y'ururimi n'umuco
+            <br>
+            
+            Address: KG 11 Ave, Kigali, Rwanda
+            <br>
+            BP: 5796
+            <br>
+            Tel: +25071163257
+            <br>
+            Email: info@ralc.gov.rw
+              
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-xl-3 col-md-6 col-lg-3">
+                <div class="footer_widget">
+                   <!--  <h3 class="footer_title">
+                        About Us
+                    </h3> -->
+                    
+                    
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div> 
+ </div>
+<div class="copy-right_text" style="background-color:#000000;margin-top:-35px;">
+    <div class="container">
+        <div class="footer_border"></div>
+        <div class="row">
+            <div class="col-xl-12">
+              <h2 >
+            Abo turi bo
+        </h2> 
+            <p class="aboutUs">
+            Inteko Nyarwanda y'ururimi n'umuco
+            <br>
+            
+            Address: KG 11 Ave, Kigali, Rwanda
+            <br>
+            BP: 5796
+            <br>
+            Tel: +25071163257
+            <br>
+            Email: info@ralc.gov.rw
+            </p>
+                <p class="copy_right text-center">
+                    <p>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by Mwiza
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div> 
+</footer> 
+		]]>
+</html> 
+			</hbox>
+			
+</zk>

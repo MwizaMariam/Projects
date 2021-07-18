@@ -1,0 +1,261 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+ <?link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css"?> 
+ <!-- <?link rel="stylesheet" type="text/css" href="/bootstrap/js/bootstrap.js"?>  -->
+<zk>
+<hbox>
+
+<div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="header_top_wrap d-flex justify-content-between align-items-center">
+                                <div class="text-wrap">
+                                
+                                    <html>
+										<![CDATA[
+											<p><span>Online Culture Learning System</span></p> 
+
+												]]>
+													</html>
+                                </div>
+                                	<div class="text-wrap">
+                                		<html>
+                                			<![CDATA[
+                                   					 <p><a href="http://localhost:8080/cultureLearning/Login.zul"> <i sclass="z-ti-user"></i>  Login</a> <a href="http://localhost:8080/cultureLearning/pages/users/Users.zul">Register</a></p>
+                               							]]></html> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+ <div id="sticky_header" class="main-header-area"> 
+                 <div class="container-fluid"> 
+                     <div class="row"> 
+                        <div class="col-lg-12">
+                            <div class="header_wrap d-flex justify-content-between align-items-center">
+                                <div class="header_left">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <image src="/ralc.jpg" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="header_right d-flex align-items-center">
+                               
+                                    <div  id="navigation" class="main-menu  d-none d-lg-block">
+                                        
+                                                
+                                                <a href="#">ahabanza</a>
+                                                <a href="#">Amateka</a>
+                                                <a href="#">Amasomo</a>
+                                           
+                                            
+                                           
+                                         
+                                    </div>
+                                    <!-- <div class="Appointment">
+                                        <div class="book_btn d-none d-lg-block">
+                                            <a data-scroll-nav='1' href="#">Apply NOw</a>
+                                        </div>  -->
+                                    </div>
+                                </div>
+                            </div>
+                      
+                </div>
+            </div>
+        </div>
+        
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <!-- single_carouse -->
+             <div class="single_slider  d-flex align-items-center slider_bg_1"> 
+             
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text"><html>
+                            <![CDATA[
+                                <h3>Boost up your skills <br>
+                                    with a new way of <br>
+                                    learning.</h3>
+                                    ]]> </html>
+                                <a href="#" class="boxed-btn3">Get Start</a>
+                                <a href="#" class="boxed-btn4">Take a tour</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    
+    <!-- <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            single_carouse
+            <div class="single_slider  d-flex align-items-center slider_bg_1">
+           
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text"><html>
+                            <![CDATA[
+                                <h3>Boost up your skills <br>
+                                    with a new way of <br>
+                                    learning.</h3>
+                                    ]]> </html>
+                                <a href="#" class="boxed-btn3">Get Start</a>
+                                <a href="#" class="boxed-btn4">Take a tour</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div> 
+    </div>-->
+    
+    <html><![CDATA[
+         
+<footer class="footer">
+<div class="footer_top">
+    <div class="container">
+        <div class="newsLetter_wrap">
+            <div class="row justify-content-between">
+                <div class="col-md-7">
+                    <div class="footer_widget">
+                        <h3 class="footer_title">
+                            Stay Updated
+                        </h3>
+                        <form action="#" class="newsletter_form">
+                            <input type="text" placeholder="Email Address">
+                            <button type="submit">Subscribe Now</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-5">
+                    <div class="footer_widget">
+                        <h3 class="footer_title">
+                            Stay Updated
+                        </h3>
+                        <div class="socail_links">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="ti-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-md-6 col-lg-3">
+                <div class="footer_widget">
+                    <h3 class="footer_title">
+                        About Us
+                    </h3>
+                    <ul>
+                        <li><a href="#">Online Learning</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Center</a></li>
+                        <li><a href="#">Become an Instructor</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-xl-3 col-md-6 col-lg-3">
+                <div class="footer_widget">
+                    <h3 class="footer_title">
+                        Study
+                    </h3>
+                    <ul>
+                        <li><a href="#">Admissions Policy</a></li>
+                        <li><a href="#">Getting Started</a></li>
+                        <li><a href="#">Visa Information</a></li>
+                        <li><a href="#">Tuition Calculator</a></li>
+                        <li><a href="#">Request Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-lg-3">
+                <div class="footer_widget">
+                    <h3 class="footer_title">
+                        Support
+                    </h3>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">System Requirements</a></li>
+                        <li><a href="#">Register Activation Key</a></li>
+                        <li><a href="#">Site feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copy-right_text">
+    <div class="container">
+        <div class="footer_border"></div>
+        <div class="row">
+            <div class="col-xl-12">
+                <p class="copy_right text-center">
+                    <p>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by Mwiza
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+    ]]></html>
+   <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script> 
+</hbox>
+</zk>

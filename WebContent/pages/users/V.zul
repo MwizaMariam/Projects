@@ -1,0 +1,125 @@
+
+	
+<zk>
+
+<?link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png"?>
+	<?link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png"?>
+	<?link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png"?>
+
+	
+
+	<!-- Google Font -->
+	<?link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"?>
+	<!-- CSS -->
+	<?link rel="stylesheet" type="text/css" href="vendors/styles/core.css"?>
+	<?link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css"?>
+	<?link rel="stylesheet" type="text/css" href="vendors/styles/style.css"?>
+
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-119386393-1');
+	</script>
+	<?link rel="stylesheet" type="text/css" href="src/plugins/plyr/dist/plyr.css"?>
+
+<style>
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    height: 599px;
+    width: 900px;
+    margin-left: 350px;
+}
+</style>
+<div class="card-box mb-30"   apply="org.zkoss.bind.BindComposer"   align="stretch" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.VideoModel')" xmlns:h="http://www.w3.org/1999/xhtml"
+
+xmlns:f="http://www.w3.org/1999/xhtml"
+xmlns:zk="http://www.zkoss.org/2005/zk"
+
+>
+<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center ">
+			<div class="container" >
+			<div class="row align-items-center">
+				<div class="col-md-6 col-lg-7">
+					<!-- <image src="vendors/images/login-page-img.png" /> -->
+				</div>
+			
+			<if test="@load(vm.videoSet)">
+			<html>
+			<video src="${vm.video.url }" controls="controls" id="vid" height="600px" width="600px" style="margin-left:400px;"/>
+<!-- 			<video src="" controls="true" width="600px" height="600px" id="vid"> 
+</video>-->
+
+					
+			</html>
+			
+			</if>
+			<html> 
+			<!-- <video src="${vm.video.url }" controls="controls" height="300px" width="300px"/> -->
+<!-- 			<video src="" controls="true" width="400px" height="300px" id="vid"> -->
+<!-- </video> -->
+
+			</html>
+			<forEach items="@load(vm.videos)">
+			<html>
+			<a href="#"  style=" font-weight:2em; margin-left: 500px;" data-src="${each.url}">${each.title }</a>
+			</html>
+			</forEach>
+			
+			</div>
+			</div>
+		
+			</div>
+			
+<!-- <listbox  multiple="true"  model="@bind(vm.videos)" >
+<listhead>
+<listheader label="Video" />
+</listhead>
+<template  name="model" var="m" >
+<listitem  >
+<listcell>
+<html>
+<a href="?id=${m.id }">
+<div style="padding: 20px;">${m.title }</div>
+</a>
+<div style="padding: 30px 20px; background: yellow;border: 1px solid black;" data-src="${m.url }">${m.title }</div>
+</html>
+</listcell>
+</listitem>
+</template>
+</listbox>
+		 -->			</div>
+		 <!-- </div> -->
+					<html>
+					
+					
+<script>
+    function videoListener(){
+    	console.log('a');
+        var vid = document.querySelector("#vid");
+        vid.src = this.getAttribute('data-src');
+    }
+    console.log('b');
+    document.querySelectorAll('[data-src]').forEach(el=>{
+        el.addEventListener('click', videoListener);
+    });
+</script>	</html>				
+		
+		<script src="vendors/scripts/core.js"></script>
+	<script src="vendors/scripts/script.min.js"></script>
+	<script src="vendors/scripts/process.js"></script>
+	<script src="vendors/scripts/layout-settings.js"></script>
+	<script src="src/plugins/plyr/dist/plyr.js"></script>
+	<script src="https://cdn.shr.one/1.0.1/shr.js"></script>
+<!-- 	<script> -->
+<!-- 		plyr.setup({ -->
+<!-- 			tooltips: { -->
+<!-- 				controls: !0 -->
+<!-- 			}, -->
+<!-- 		}); -->
+<!-- 	</script>			 -->
+</zk>

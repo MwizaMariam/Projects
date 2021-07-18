@@ -1,0 +1,177 @@
+
+<zk>
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<!-- <style src="/Culture.css"></style> -->
+<!-- <div sclass="vert"> -->
+<!--  <script type="text/javascript" src="home.js" /> -->
+<div class="card-box mb-30"   apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.LessonModel')" xmlns:h="http://www.w3.org/1999/xhtml"
+
+xmlns:f="http://www.w3.org/1999/xhtml"
+xmlns:zk="http://www.zkoss.org/2005/zk"
+>
+
+<style>
+.z-combobox-input, .z-bandbox-input, .z-datebox-input, .z-timebox-input, .z-spinner-input, .z-doublespinner-input {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    color: rgba(0,0,0,0.9);
+    border-bottom: 1px;
+    height: 34px;
+    border: 2px solid #d9d9d9;
+    border-right: 0;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    -o-border-radius: 4px 0 0 4px;
+    -ms-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    margin: 0;
+    padding: 8px;
+    line-height: 16px;
+    background: #fff;
+    width: 280px;
+}
+
+</style>
+<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center ">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-6 col-lg-7">
+					<!-- <image src="vendors/images/login-page-img.png" /> -->
+				</div>
+				<div class="col-md-6 col-lg-5">
+					<div class="login-box bg-white box-shadow border-radius-10">
+<div class="login-title">
+					<html>
+			<![CDATA[
+				<ul>
+				<h2 class="text-center text-primary"> Ongeramo ibigize isomo</h2>
+				</ul>
+				]]>
+				</html>
+					</div>
+						<div class="input-group custom">
+								
+								<vlayout  >
+                 
+                  <combobox  id="course" model="@load(vm.listOfCourses)" 
+                     selectedItem="@bind(vm.course)"
+                        mold="rounded" autodrop="true" autocomplete="true" constraint="no empty" placeholder="hitamo isomo"  >
+                      <template name="model">
+                           <comboitem
+                               label="@load(each.chapter)" value="@load(each.courseCode)" />
+                     </template>
+                     
+                   </combobox>
+                   
+               </vlayout> 
+
+								<div class="input-group-append custom">
+								<html>
+			<![CDATA[
+						
+									<span class="input-group-text"><i class="fa fa-book"></i>
+									</span>
+									]]>
+									</html>
+								</div>
+							</div>
+					<div class="input-group custom">
+								
+								<textbox value="@bind(vm.lesson.lessonContent)" constraint="no empty"  placeholder="ongeramo ibirigize" class=" form-control"></textbox>
+								<div class="input-group-append custom">
+								<html>
+			<![CDATA[
+						
+									<span class="input-group-text"><i class="fa fa-book"></i>
+									</span>
+									]]>
+									</html>
+								</div>
+</div>
+
+<div >
+  <button  id="attachBtn" sclass="attachBtn"
+                            iconSclass="z-icon-upload"
+                            upload="true" label="ongeramo umwitozo" onUpload="@command('onUploadPDF',upEvent=event)"/>
+
+
+<button label="Show PDF" visible="@load(vm.fileuploaded)"
+				onClick="@command('showPDF')">
+			</button>
+
+
+  </div>
+  
+
+
+
+<div class="row">
+								<div class="col-sm-12">
+		
+													
+									<div class="font-16 weight-600 pt-10 pb-10 text-center" ></div>
+									<div class="input-group mb-0">
+										
+										<button id="save" iconSclass="z-icon-book" label="Ohereza" onClick="@command('saveLesson')" class="btn btn-primary btn-lg btn-block" ></button>
+										</div>
+								</div>
+								
+							</div>
+
+
+
+
+</div>
+</div>
+ 
+</div>
+</div>
+
+
+
+
+
+<listbox  multiple="true"   model="@bind(vm.listOfingombajwi)" mold="paging" pageSize="10" style="width:1200px;">
+	
+<listhead  >
+<listheader   label="code y'isomo" align="center"></listheader>
+<listheader   label="izina ry'isomo" align="center"></listheader>
+<listheader label="ibigize isomo" align="center"></listheader>
+
+<listheader label="pdf" align="center"></listheader>
+<listheader label="igikorwa" align="center"></listheader>
+
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem>
+<listcell><label value="@bind(m.course.courseCode)" style="font-weight:bold;margin-left:-20px;"/></listcell>
+<listcell><label value="@bind(m.course.chapter)" style="margin-left:-20px;"/></listcell>
+<listcell><label value="@bind(m.lessonContent)" style="margin-left:-20px;"/></listcell>
+<listcell><label value="@bind(m.fileUpload)" style="margin-left:-20px;"/></listcell>
+
+<listcell >
+
+
+<button apply="org.zkoss.bind.BindComposer"
+		 viewModel="@id('n') @init('cultureLearning.cultureLearning.navigation.NavigationViewModel3')" onClick="@command('navigate',url='/pages/courseClient/Update3.zul?id='.concat(m.course.courseCode))" style="margin-left:5px;margin-top:20px;background:black ;width:70px; " iconSclass="z-icon-edit" />
+
+
+<button   onClick="@command('deleteContent',de=m)" style="margin-left:45px;margin-top:-0px;background:red ;width:80px;" image="/images/delete.png"/>
+</listcell>
+</listitem>
+
+</template>
+
+
+</listbox>
+</div>
+</div>
+
+
+</zk>
+</zk>

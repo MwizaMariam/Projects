@@ -1,0 +1,50 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<div class="card-box mb-30"   apply="org.zkoss.bind.BindComposer"  id="win" align="stretch" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.TransactionModel')" xmlns:h="http://www.w3.org/1999/xhtml"
+
+xmlns:f="http://www.w3.org/1999/xhtml"
+xmlns:zk="http://www.zkoss.org/2005/zk"
+
+>
+<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">	
+	
+
+
+<listbox  multiple="true"   model="@bind(vm.listOfAllTransaction)" mold="paging" pageSize="8">
+	<listhead>
+	<listheader label="Transaction Id"></listheader>
+	<listheader label="Stage"></listheader>
+	<listheader label="Izina rya mbere"></listheader>
+	<listheader label="Izina rya nyuma"> </listheader>
+	
+	<listheader label="Ikiciro yishyuriye"> </listheader>
+	<listheader label="Umuyoboro" ></listheader>
+<listheader label="external transaction id"></listheader>
+	</listhead>
+	<template  name="model" var="m" >
+
+<listitem>
+<listcell><label value="@bind(m.transactionId)" style="font-weight:bold;"/></listcell>
+<listcell><label value="@bind(m.stage)" /></listcell>
+<listcell><label value="@bind(m.user.fname)"  /></listcell>
+<listcell><label value="@bind(m.user.lname)"  /></listcell>
+
+<listcell><label value="@bind(m.subscriptiontype.level)" /></listcell>
+
+<listcell><label value="@bind(m.channel)"  /></listcell>
+<listcell><label value="@bind(m.externalTransactionId)"  /></listcell>
+	</listitem>
+	</template>
+	</listbox>
+	<div class="col-md-6 col-lg-5" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm')@init('cultureLearning.cultureLearning.model.TransactionModel')">
+<div class="input-group mb-0">
+										
+										<button id="save" iconSclass="z-icon-print" class="btn btn-primary btn-lg btn-block" label="raporo" onClick="@command('transactionReport')" autodisable="self" style="margin-top:20px;" ></button>
+										</div>
+
+</div>
+</div>
+</div>
+
+
+</zk>

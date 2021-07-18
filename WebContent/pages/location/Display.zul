@@ -1,0 +1,48 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+
+<div class="card-box mb-30" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.AddressModel')" >
+<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">	
+	<listbox  multiple="true"  model="@bind(vm.listofCountries)" mold="paging" pageSize="10" >
+	
+<listhead  >
+
+<listheader   label="   code 'igihugu" align="center"></listheader>
+
+<listheader   label="Izina ry'Iguhugu" align="center"></listheader>
+<listheader   label="Guhindura/Gusiba" align="center"></listheader>
+ 
+ 
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem  >
+
+<listcell><label value="@bind(m.code)" style="margin-left:-50px;"/>
+
+</listcell>
+
+<listcell><label value="@bind(m.name)" style="margin-left:-50px;"/>
+</listcell>
+
+<listcell >
+		 
+<button  iconSclass="z-icon-edit"  apply="org.zkoss.bind.BindComposer"
+		 viewModel="@id('n') @init('cultureLearning.cultureLearning.navigation.NavigationViewModel')"  onClick="@command('navigate',url='/pages/location/Update.zul' )" style="margin-left:-55px;margin-top:20px;background:black"  ></button>
+ 
+<button   onClick ="@command('delete',de=m)" style="margin-left:45px;margin-top:-0px;background:red" image="/images/delete.png"></button>
+</listcell>
+
+
+</listitem>
+
+</template>
+
+</listbox>
+
+</div>
+
+</div>
+</zk>

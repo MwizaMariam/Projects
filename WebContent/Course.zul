@@ -1,0 +1,69 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk >
+<style src="/Culture.css"></style>
+<div  sclass="vert" >
+
+
+<hbox   apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.CourseModel')" xmlns:h="http://www.w3.org/1999/xhtml"
+
+xmlns:f="http://www.w3.org/1999/xhtml"
+xmlns:zk="http://www.zkoss.org/2005/zk"
+>
+
+<grid style="width:1410px; margin-left:-160px">
+<rows>
+<row>
+umutwe w'amagambo:
+<textbox value="@bind(vm.course.title)" constraint="no empty" ></textbox>
+</row>
+<row>
+Ubwoko bw'amagambo:
+<combobox value="@bind(vm.course.type)">
+	<comboitem label="ContentBased" />
+	<comboitem label="QuestionBased" />
+</combobox>
+</row>
+ 
+<row>
+<button id="save" label="save" onClick="@command('saveCourse')" ></button>
+</row>
+</rows>
+
+</grid>
+<listbox  multiple="true"  model="@bind(vm.listCourses)">
+	
+<listhead  >
+<listheader   label="Id" align="center"></listheader>
+<listheader   label="umutwe w'amagambo" align="center"></listheader>
+<listheader label="ubwoko bw'amagambo" align="center"></listheader>
+<listheader label="igikorwa" align="center"></listheader>
+
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem>
+<listcell><label value="@bind(m.id)" style="font-weight:bold;"/></listcell>
+<listcell><label value="@bind(m.title)"/></listcell>
+<listcell><label value="@bind(m.type)"/></listcell>
+<listcell>
+<if test="@load(m.contentBased)">
+<button label="View" href="@load('ContentBased.zul?id='.concat(m.id))"/>
+</if>
+<if test="@load(m.questionBased)">
+<button label="View" href="@load('QuestionBased.zul?id='.concat(m.id))"/>
+</if>
+<button label="Edit" onClick="@command('loadCourse',id=m.id)" />
+</listcell>
+</listitem>
+
+</template>
+
+
+</listbox>
+
+</hbox>
+</div>
+
+
+</zk>

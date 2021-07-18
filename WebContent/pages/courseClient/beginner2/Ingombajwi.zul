@@ -1,0 +1,50 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+<div  class="card-box mb-30"  apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.LessonModel')" >
+
+	
+	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center ">
+	<listbox  multiple="true"  model="@bind(vm.listOfingombajwi)" mold="paging" pageSize="7">
+	
+<listhead  >
+
+
+
+<listheader   label="Izina ry'Isomo" align="center"></listheader>
+<listheader   label="ibigize isomo" align="center"></listheader>
+<listheader   label="imyitozo" align="center"></listheader>
+ 
+ <listheader   label="Bika umwitozo" align="center"></listheader>
+ 
+ 
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem  >
+
+<listcell><label value="@bind(m.course.chapter)" style="margin-left:-50px;"/>
+
+</listcell>
+
+<listcell><label value="@bind(m.lessonContent)" style="margin-left:-50px;"/>
+</listcell>
+
+<listcell><label value="@bind(m.fileUpload)" style="margin-left:-50px;"/>
+</listcell>
+<listcell>
+<button label="Bika umwitozo" onClick="@command('downloadByPath',path=m.fileUpload)" iconSclass="z-icon-download">
+	
+</button>
+</listcell>
+</listitem>
+
+</template>
+
+</listbox>
+
+</div>
+
+</div>s
+</zk>

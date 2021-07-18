@@ -1,0 +1,42 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<!-- <style src="/Culture.css"></style>
+<div sclass="vert"> -->
+<div  class="card-box mb-30" apply="org.zkoss.bind.BindComposer" align="stretch" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.UserModel')" >
+	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">	
+	<listbox model="@bind(vm.listofTeacher)"  mold="paging" pageSize="10" >
+	<listhead>
+	<listheader label="Izina rya mbere"></listheader>
+	<listheader label="Izina rya nyuma"></listheader>
+	<listheader label="Telephone"></listheader>
+	<listheader label="nimero y'irangamuntu"></listheader>
+	<listheader label="email"></listheader>
+	<listheader label="Igihugu akomokamo"></listheader>
+	
+	</listhead>
+	<template name="model" var="user">
+	<listitem>
+	
+	<listcell label="@bind(user.fname)"></listcell>
+	<listcell label="@bind(user.lname)"></listcell>
+	<listcell label="@bind(user.phone)"></listcell>
+	<listcell label="@bind(user.nid)"></listcell>
+	<listcell label="@bind(user.email)"></listcell>
+	<listcell label="@bind(user.address)"></listcell>
+	</listitem>
+	
+	</template>
+	</listbox>
+	
+
+<div class="col-md-6 col-lg-5" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm')@init('cultureLearning.cultureLearning.model.UserModel')">
+<div class="input-group mb-0">
+										
+										<button id="save" iconSclass="z-icon-print"  style="margin-top:20px;" class="btn btn-primary btn-lg btn-block" label="raporo" onClick="@command('printReport')" autodisable="self"  ></button>
+										</div>
+
+</div>
+</div>
+
+</div>
+</zk>

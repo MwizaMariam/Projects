@@ -1,0 +1,43 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<div sclass="vert">
+<hbox apply="org.zkoss.bind.BindComposer"   align="stretch" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.AddressModel')" >
+	
+	
+	<listbox  multiple="true"  model="@bind(vm.listofCountries)">
+	
+<listhead  >
+
+<listheader   label=" Code" align="center"></listheader>
+
+<listheader   label="Country name" align="center"></listheader>
+
+ 
+<listheader   label="Operations" align="center"></listheader> 
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem  >
+
+<listcell><label value="@bind(m.code)"></label>
+
+</listcell>
+
+<listcell><label value="@bind(m.name)"></label></listcell>
+
+
+
+<listcell>
+ <button label="Delete"  onClick ="@command('delete',de=m)" style="margin-left:80px;"></button>
+ </listcell>
+</listitem>
+
+</template>
+
+</listbox>
+
+
+</hbox>
+</div>
+</zk>

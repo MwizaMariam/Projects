@@ -1,0 +1,42 @@
+<zk>
+<style src="/Culture.css"></style>
+<div sclass="vert">
+
+	
+	<div class="card-box mb-30"  apply="org.zkoss.bind.BindComposer" align=" stretch" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.SubscriptionTypeModel')" >
+	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center ">
+	
+	
+	
+	<listbox  multiple="true"   model="@bind(vm.listOfAllSubscribers)"   mold="paging" pageSize="5">
+	
+<listhead  >
+<listheader   label="Id" align="center"></listheader>
+<listheader   label="Ikiciro" align="center"></listheader>
+
+<listheader label="Igiciro" align="center"></listheader>
+
+<listheader label="igikorwa" align="center"></listheader>
+
+</listhead>
+<template  name="model" var="m" >
+
+<listitem>
+<listcell><textbox value="@bind(m.subscriptionTypeId)" style="font-weight:bold;margin-left:-20px;"/></listcell>
+<listcell><textbox value="@bind(m.level)" style="margin-left:-20px;"/></listcell>
+
+<listcell><textbox value="@bind(m.price)" style="margin-left:-20px;"/></listcell>
+<listcell>
+<button onClick="@command('update',upd=m)" style="margin-left:-55px;margin-top:20px;background:green ;width:70px;" iconSclass="z-icon-edit" /> 
+
+  </listcell>
+
+</listitem>
+
+</template>
+</listbox>
+</div>
+</div>
+</div>
+
+</zk>

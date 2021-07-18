@@ -1,0 +1,38 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+<div sclass="vert">
+<hbox apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.LessonModel')" >
+	
+	
+	<listbox  multiple="true"  model="@bind(vm.listOfContentsInChapter)" style="width:1536px; margin-left:-160px; height:800px">
+	
+<listhead  >
+
+<listheader   label="   code 'isomo" align="center"></listheader>
+
+<listheader   label="Izina ry'Isomo" align="center"></listheader>
+
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem  >
+
+<listcell><label value="@bind(m.course.chapter)" style="margin-left:-50px;"/>
+
+</listcell>
+
+<listcell><label value="@bind(m.lessonContent)" style="margin-left:-50px;"/>
+</listcell>
+
+</listitem>
+
+</template>
+
+</listbox>
+
+
+</hbox>
+</div>
+</zk>

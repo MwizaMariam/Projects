@@ -1,0 +1,55 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+
+	<div class="card-box mb-30" apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.VideoModel')">
+		<div
+			class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
+			<listbox multiple="true" model="@bind(vm.listOfVideo)"
+				mold="paging" pageSize="10">
+
+				<listhead>
+
+					<listheader label="   izina rya videwo"
+						align="center">
+					</listheader>
+
+					<listheader label="reba Videwo"
+						align="center">
+					</listheader>
+
+
+
+				</listhead>
+
+				<template name="model" var="m">
+
+					<listitem>
+
+						<listcell>
+							<label value="@bind(m.title)"
+								style="margin-left:-50px;" />
+
+						</listcell>
+
+						<listcell>
+							<a href="@load(m.url)">
+								<label value="@bind(m.url)"
+									style="margin-left:-50px;" />
+							</a>
+						</listcell>
+
+
+
+
+					</listitem>
+
+				</template>
+
+			</listbox>
+
+		</div>
+
+	</div>
+</zk>

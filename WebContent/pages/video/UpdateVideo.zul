@@ -1,0 +1,46 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+
+	<div class="card-box mb-30"  apply="org.zkoss.bind.BindComposer" align=" stretch" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.VideoModel')" >
+	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center ">
+	
+	
+	
+	<listbox  multiple="true"  model="@bind(vm.listOfVideo)" mold="paging" pageSize="10">
+	
+<listhead  >
+
+<listheader   label=" Izina rya videwo" align="center"></listheader>
+
+<listheader   label="Umuyoboro" align="center"></listheader>
+
+ 
+<listheader   label="igihorwa" ></listheader> 
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem  >
+
+<listcell><textbox value="@bind(m.title)"></textbox>
+
+</listcell>
+
+<listcell><textbox value="@bind(m.url)"></textbox></listcell>
+
+
+
+<listcell>
+ <button label="Hindura"  onClick ="@command('update',up=m)" ></button>
+ </listcell>
+</listitem>
+
+</template>
+
+</listbox>
+
+
+</div>
+</div>
+</zk>

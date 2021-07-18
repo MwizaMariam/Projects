@@ -1,0 +1,40 @@
+<zk>
+	<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+
+<!-- <style src="/Culture.css"></style>
+<div sclass="vert"> -->
+<div class="card-box mb-30" apply="org.zkoss.bind.BindComposer" align="stretch" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.CourseModel')" >
+	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">	
+	<listbox model="@bind(vm.listCourses)"  mold="paging" pageSize="10">
+	<listhead>
+	<listheader label="idi y'isomo"></listheader>
+	<listheader label="Amasomo "></listheader>
+	<listheader label="inshuro ryasuwe"></listheader>
+	
+	
+	</listhead>
+	<template name="model" var="user">
+	<listitem>
+	
+	<listcell label="@bind(user.courseCode)"></listcell>
+	<listcell label="@bind(user.chapter)"></listcell>
+	
+	<listcell label="@bind(user.visit)"></listcell>
+	
+	
+	</listitem>
+	
+	</template>
+	</listbox>
+	<div class="col-md-6 col-lg-5" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm')@init('cultureLearning.cultureLearning.model.LessonModel')">
+<div class="input-group mb-0">
+										
+										<button id="save" iconSclass="z-icon-print" class="btn btn-primary btn-lg btn-block" label="raporo" onClick="@command('printViewedCourse')" autodisable="self" style="margin-top:20px;" ></button>
+										</div>
+
+</div>
+
+</div>
+</div>
+
+</zk>

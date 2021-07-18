@@ -1,0 +1,39 @@
+<zk>
+<style src="/Culture.css"></style>
+<div sclass="vert">
+
+	
+	<div class="card-box mb-30"  apply="org.zkoss.bind.BindComposer" align=" stretch" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.CourseModel')" >
+	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center ">
+	
+	
+	
+	<listbox  multiple="true"  model="@bind(vm.listCourses)" mold="paging" pageSize="5" >
+	
+<listhead  >
+<listheader   label="Id" align="center"></listheader>
+<listheader   label="izina ry'isomo" align="center"></listheader>
+
+<listheader label="Vugurura" align="center"></listheader>
+
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem>
+<listcell><textbox value="@bind(m.courseCode)" style="font-weight:bold;margin-left:-20px;"/></listcell>
+<listcell><textbox value="@bind(m.chapter)" style="margin-left:-20px;"/></listcell>
+
+<listcell>
+<!-- <button apply="org.zkoss.bind.BindComposer"
+		 viewModel="@id('n') @init('cultureLearning.cultureLearning.navigation.NavigationViewModel')"   onClick="@command('navigate', url='/pages/courseClient/UpdateCourse.zul?id='.concat(m.courseCode))" style="margin-left:-55px;margin-top:20px;background:green ;width:70px;" image="/images/view.png"/>
+<button   onClick="@command('deleteCourse',de=m)" style="margin-left:45px;margin-top:-0px;background:red ;width:80px;" image="/images/delete.png"   / -->>
+<button  iconSclass="z-icon-edit" onClick="@command('updateCourse',up=m)" style="margin-left:55px;margin-top:20px;background:black ;width:80px;"  /></listcell>
+</listitem>
+</template>
+</listbox>
+</div>
+</div>
+</div>
+
+</zk>

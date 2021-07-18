@@ -1,0 +1,40 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<!-- <div sclass="vert"> -->
+<div class="card-box mb-30"  apply="org.zkoss.bind.BindComposer" align=" stretch" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.LessonModel')" >
+	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center ">
+	
+	<listbox  multiple="true"  model="@bind(vm.listofContentlesson)" mold="paging" pageSize="6" >
+	
+<listhead  >
+
+<listheader   label=" ibigize isomo" align="center"></listheader>
+ <listheader   label=" file" align="center"></listheader>
+<listheader   label="Vugurura" ></listheader> 
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem  >
+
+
+
+
+
+<listcell><textbox value="@bind(m.lessonContent)" ></textbox></listcell>
+
+<listcell><textbox value="@bind(m.fileUpload)" ></textbox></listcell>
+
+<listcell>
+ <button iconSclass="z-icon-edit"  onClick ="@command('updateLesson',up=m)" ></button>
+ </listcell>
+</listitem>
+
+</template>
+
+</listbox>
+
+
+</div>
+</div>
+</zk>

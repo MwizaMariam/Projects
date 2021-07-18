@@ -1,0 +1,98 @@
+<zk>
+<style src="/Home.css"/>
+<div sclass="vert">
+<!-- <div class="card-box mb-30"  > -->
+<!-- <div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">	 -->
+	
+	<style>
+	 .vert .col{
+ margin-left: 300px;
+ margin-top:1px;
+ height: 200px;
+width: 1350px;
+ 
+ }
+ .vert .col .z-image{
+ width:13%;height:90%;
+ margin-left: 13px;
+ }
+ .vert .col1{
+ margin-left: 300px;
+   
+    //background-color: black;
+    margin-top: -5px;
+    height: 200px;
+     width: 1350px;
+}
+ .vert .col1 .z-image{
+ width:13%;height:90%;
+ margin-left: 13px;
+ }
+ .vert .col2{
+ margin-left: 300px;
+   
+    //background-color: black;
+    margin-top: -5px;
+    height: 200px;
+    width: 1350px;
+ }
+ .vert .col2 .z-image{
+ width:13%;height:90%;
+ margin-left: 13px;
+ }
+ .vert .col3{
+ margin-left: 300px;
+   
+    //background-color: black;
+    margin-top: -5px;
+    height: 200px;
+    width: 1350px;
+}
+ .vert .col3 .z-image{
+ width:13%;height:90%;
+ margin-left: 13px;
+ }
+	</style>
+	<div sclass="col" >
+	<image src="/images/gihanga.jpg" ></image>
+	<image src="/images/gahima.jpg" ></image>
+	<image src="/images/yuhi1.jpg" ></image>
+	<image src="/images/Ndahiro 1.jpg" ></image>
+	<image src="/images/ndoba.jpg" ></image>
+	<image src="/images/samembe.jpg" ></image>
+	<image src="/images/nsoro.jpg" ></image>
+	
+	</div>
+	<div sclass="col1">
+	<image src="/images/ruganzu1.jpg" ></image>
+	<image src="/images/cyilima.jpg" ></image>
+	<image src="/images/kigeli1.jpg"></image>
+	<image src="/images/mibambwe.jpg" ></image>
+	<image src="/images/yuhi2.jpg" ></image>
+	<image src="/images/ndahiro2.jpg" ></image>
+	<image src="/images/ruganzu2.jpg" ></image>
+	</div>
+	<div sclass="col2">
+	<image src="/images/mutara1.jpg" ></image>
+	<image src="/images/kigeli2.jpg" ></image>
+	<image src="/images/mibambwe2.jpg" ></image>
+	<image src="/images/yuhi3.jpg" ></image>
+	<image src="/images/19.jpg" ></image>
+	<image src="/images/20.jpg" ></image>
+	<image src="/images/21.jpg" ></image>
+	</div>
+		
+	<div sclass="col3">
+	
+	<image src="/images/22.jpg" ></image>
+	<image src="/images/23.jpg" ></image>
+	<image src="/images/24.jpg" ></image>
+	<image src="/images/25.jpg" ></image>
+	<image src="/images/26.jpg" ></image>
+	<image src="/images/27.jpg" ></image>
+	<image src="/images/28.jpg" ></image>
+	</div>
+	</div>
+	
+	
+</zk>

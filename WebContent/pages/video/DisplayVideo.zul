@@ -1,0 +1,48 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+
+<div class="card-box mb-30" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.VideoModel')" >
+<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">	
+	<listbox  multiple="true"  model="@bind(vm.listOfVideo)" mold="paging" pageSize="10" >
+	
+<listhead  >
+
+<listheader   label="   izina rya videwo" align="center"></listheader>
+
+<listheader   label="umuyoboro wa videwo" align="center"></listheader>
+<listheader   label="Guhindura/Gusiba" align="center"></listheader>
+ 
+ 
+</listhead>
+
+<template  name="model" var="m" >
+
+<listitem  >
+
+<listcell><label value="@bind(m.title)" style="margin-left:-50px;"/>
+
+</listcell>
+
+<listcell><a href="@load(m.url)"><label  value="@bind(m.url)" style="margin-left:-50px;"/></a>
+</listcell>
+
+<listcell >
+		 
+<button  iconSclass="z-icon-edit"  apply="org.zkoss.bind.BindComposer"
+		 viewModel="@id('n') @init('cultureLearning.cultureLearning.navigation.NavigationViewModel')"  onClick="@command('navigate',url='/pages/video/UpdateVideo.zul' )" style="margin-left:-55px;margin-top:20px;background:black"  ></button>
+ 
+<button   onClick ="@command('delete',del=m)" style="margin-left:45px;margin-top:-0px;background:red" image="/images/delete.png"></button>
+</listcell>
+
+
+</listitem>
+
+</template>
+
+</listbox>
+
+</div>
+
+</div>
+</zk>

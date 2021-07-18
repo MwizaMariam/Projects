@@ -1,0 +1,195 @@
+<zk>
+	<?init class="cultureLearning.cultureLearning.services.impl.AuthenticationService" ?>
+	<!-- 	<style src="/Culture.css"/>  -->
+
+	<style src="vendors/styles/core.css"></style>
+
+	<style src="vendors/styles/icon-font.min.css"></style>
+	<style src="vendors/styles/style.css"></style>
+	<style
+		src="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800" />
+	<style
+		src="src/plugins/datatables/css/dataTables.bootstrap4.min.css">
+	</style>
+	<style
+		src="src/plugins/datatables/css/responsive.bootstrap4.min.css">
+	</style>
+
+	<style>
+		.brand-logo{ width:280px; height:70px; border-bottom:1px solid
+		rgba(0,0,0,.1); background-color:#638998;
+
+		}
+
+	</style>
+	<div class="header" apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm')@init('cultureLearning.cultureLearning.model.UserModel')">
+		<div class="header-left">
+			<div class="menu-icon dw dw-menu"></div>
+			<div class="search-toggle-icon dw dw-search2"></div>
+			<div class="header-search">
+
+				<div class="form-group mb-0">
+					<textbox
+						placeholder="andika ijambo ushaka guhindura mucyongereza"
+						value="@save(vm.translationText)"
+						class="form-control search-input">
+					</textbox>
+
+
+					<div class="dropdown">
+						<button iconSclass="z-icon-arrow-down"
+							onClick="@command('translate')" class="dropdown-toggle no-arrow"
+							style="background-color:#1b00ff">
+						</button>
+					</div>
+					<div class="dropdown">
+						<label value="@load(vm.translationResult)" />
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<div class="header-right">
+			<div class="dashboard-setting user-notification">
+				<div class="dropdown">
+					<a class="dropdown-toggle no-arrow"
+						href="javascript:;">
+						<!-- <i class="dw dw-settings2"></i> -->
+					</a>
+				</div>
+			</div>
+
+
+			<html>
+				
+				<![CDATA[ <div class="user-info-dropdown"> <div
+				class="dropdown"> <a class="dropdown-toggle" href="#"
+				role="button" onclick="$('#menu').toggle()"> <span
+				class="user-icon"> <img src="vendors/images/anon.jpg"
+				alt=""> </span> <span
+				class="user-name">${sessionScope.s_user.fname}</span>
+				</a> <div class="dropdown-menu dropdown-menu-right
+				dropdown-menu-icon-list" id="menu"> <a class="dropdown-item"
+				href="#" onclick="navigate()"><i class="dw
+				dw-settings2"></i> Guhindura ijamboBanga</a>  <a class="dropdown-item"
+				href="index.zul"><i class="dw dw-logout"></i>
+				Gusohokamo</a> </div> </div> </div>
+
+				]]>
+				
+			</html>
+
+			<div class="github-link">
+				<a href="https://github.com/dropways/deskapp"
+					target="_blank">
+					<image src="vendors/images/github.svg" />
+				</a>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- <div class="left-side-bar"> -->
+	<div class="brand-logo">
+		<a href="#">
+			<!-- <image src="vendors/images/deskapp-logo.svg"  class="dark-logo"></image> -->
+			<image src="vendors/images/KinyApp5.png"></image>
+
+			<!-- <image src="vendors/images/deskapp-logo-white.svg" class="light-logo"></image> -->
+		</a>
+		<div class="close-sidebar">
+			<html>
+				<![CDATA[ <i class="ion-close-round"></i> ]]>
+				
+				</html>
+		</div>
+	</div>
+	<div id="container" sclass="vertical"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('cultureLearning.cultureLearning.navigation.NavigationViewModel2')">
+		<navbar id="navbar" orient="vertical" collapsed="false"
+			onSelect="@command('navigatePage', target=self.selectedItem.attributes['navigationPage'])">
+
+
+			<nav label="Ahabanza" iconSclass="z-icon-home"
+				children="@load(vm.pageMap[self.label].values()) @template('navitem')" />
+
+
+			<forEach items="@load(vm.categories)">
+				<nav label="@load(each)" iconSclass="z-icon-book"
+					style="height: auto;
+   			 		max-height: 300px;
+    				overflow-x: hidden;"
+					children="@load(vm.pageMap[self.label].values()) @template('navitem')" />
+			</forEach>
+
+
+			<nav label="Amateka" iconSclass="z-icon-flag"
+				children="@load(vm.pageMap[self.label].values()) @template('navitem')" />
+
+			<nav label="Videwo" iconSclass="z-icon-video-camera"
+				children="@load(vm.pageMap[self.label].values()) @template('navitem')" />
+
+
+			<nav label="Ibitekerezo" iconSclass="z-icon-comments"
+				children="@load(vm.pageMap[self.label].values()) @template('navitem')" />
+
+			<nav label="Twandikire" iconSclass="z-icon-circle	"
+				children="@load(vm.pageMap[self.label].values()) @template('navitem')" />
+
+
+
+			<template name="navitem" var="navigationPage">
+				<navitem label="@load(navigationPage.subTitle)"
+					selected="@load(navigationPage.selected)" />
+			</template>
+		</navbar>
+
+		<include id="contentInclude" mode="defer" sclass="content"
+			currentPage="@ref(vm.currentPage)"
+			src="@load(currentPage.includeUri)" />
+		<div id="na" onShowNotification="@command('translate')"></div>
+	</div>
+
+
+	<div class="main-container">
+
+		<div class="footer"
+			style="position:absolute; bottom:-50px; height:80px; left:0px; right:0px; overflow:hidden;">
+			Copyright © Since 2017 ICT FOR ALL IN ALL, INC.
+		</div>
+
+
+	</div>
+	<script src="vendors/scripts/core.js"></script>
+	<script src="vendors/scripts/script.min.js"></script>
+	<script src="vendors/scripts/process.js"></script>
+	<script src="vendors/scripts/layout-settings.js"></script>
+	<script src="src/plugins/jQuery-Knob-master/jquery.knob.min.js"></script>
+	<script src="src/plugins/highcharts-6.0.7/code/highcharts.js"></script>
+	<script
+		src="src/plugins/highcharts-6.0.7/code/highcharts-more.js">
+	</script>
+	<script
+		src="src/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js">
+	</script>
+	<script
+		src="src/plugins/jvectormap/jquery-jvectormap-world-mill-en.js">
+	</script>
+	<!-- <script src="vendors/scripts/dashboard2.js"></script> -->
+
+	<script>
+		function navigate(){
+		zk.Widget.$('$na').fire('onShowNotification',null,{toServer:true})
+		}
+	</script>
+
+</zk>

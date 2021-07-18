@@ -1,0 +1,79 @@
+
+<zk>
+
+<style src="/Culture.css"/>
+
+	<!-- <div sclass="video">
+				<html>
+				
+					<attribute name="content">
+						
+						
+						<video src="IREME.mp4" controls="controls" height="300px" width="300px">
+						
+						</video>
+						
+						<video src="ntibavuga.mp4" controls="controls" height="300px" width="300px"></video>
+						
+						<video src="Amata.mp4" controls="controls" height="300px" width="300px"></video>
+						
+					</attribute>
+					
+				</html>
+			</div>-->
+			<!-- <div sclass="vert"> -->
+			<div  sclass="video" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('cultureLearning.cultureLearning.model.VideoModel2')" >
+			<if test="@load(vm.videoSet)">
+			<html>
+			<video src="${vm.video.url }" controls="controls" height="300px" width="300px"/>
+			<video src="" controls="true" width="400px" height="300px" id="vid">
+</video>
+
+			</html>
+			
+			</if>
+			<html> 
+			<!-- <video src="${vm.video.url }" controls="controls" height="300px" width="300px"/> -->
+			<video src="" controls="true" width="400px" height="300px" id="vid">
+</video>
+
+			</html>
+			<forEach items="@load(vm.videos)">
+			<html>
+			<a href="#"  style=" font-weight:2em; margin-left: 500px;" data-src="${each.url}">${each.title }</a>
+			</html>
+			</forEach>
+			
+<!-- <listbox  multiple="true"  model="@bind(vm.videos)" >
+<listhead>
+<listheader label="Video" />
+</listhead>
+<template  name="model" var="m" >
+<listitem  >
+<listcell>
+<html>
+<a href="?id=${m.id }">
+<div style="padding: 20px;">${m.title }</div>
+</a>
+<div style="padding: 30px 20px; background: yellow;border: 1px solid black;" data-src="${m.url }">${m.title }</div>
+</html>
+</listcell>
+</listitem>
+</template>
+</listbox>
+		 -->			</div>
+		 <!-- </div> -->
+					<html>
+<script>
+    function videoListener(){
+    	console.log('a');
+        var vid = document.querySelector("#vid");
+        vid.src = this.getAttribute('data-src');
+    }
+    console.log('b');
+    document.querySelectorAll('[data-src]').forEach(el=>{
+        el.addEventListener('click', videoListener);
+    });
+</script>	</html>				
+					
+</zk>
